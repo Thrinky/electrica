@@ -180,7 +180,7 @@ assessVariableEqual('{var_str}', {var_str}_Reference);
             for i in posi:
                 estudiante[i] = ''
             new_var = [i for i in variables]
-            print('Variables\n' + str(variables) + '\n' + 5 * 20 * '-')
+            print('Variables\n' + ','.join(variables) + '\n' + 5 * 20 * '-')
             if lista_variables_no_deseadas != '':
                 lista_variables_no_deseadas = (''.join([i for i in lista_variables_no_deseadas if ' ' != i])).split(',')
                 lista_variables_no_deseadas = [i for i in lista_variables_no_deseadas if '' != i]
