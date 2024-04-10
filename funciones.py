@@ -178,10 +178,10 @@ assessVariableEqual('{var_str}', {var_str}_Reference);
                             posi.remove(posi[i])
                             break
                 print('Help Variables\n' + ','.join(var_h_def) + '\n' + 5 * 20 * '-')
+                print('Variables without Help Variables\n' + ','.join(variables) + '\n' + 5 * 20 * '-')
             for i in posi:
                 estudiante[i] = ''
             new_var = [i for i in variables]
-            print('Variables\n' + ','.join(variables) + '\n' + 5 * 20 * '-')
             if lista_variables_no_deseadas != '':
                 lista_variables_no_deseadas = (''.join([i for i in lista_variables_no_deseadas if ' ' != i])).split(',')
                 lista_variables_no_deseadas = [i for i in lista_variables_no_deseadas if '' != i]
@@ -193,7 +193,7 @@ assessVariableEqual('{var_str}', {var_str}_Reference);
                             new_var.remove(var_n_d)
                             break
                 print('Unwanted Variable\n' + ','.join(new_var_n_d) + '\n' + 5 * 20 * '-')
-                print('variables without unwanted variables\n' + ','.join(new_var) + '\n' + 5 * 20 * '-')
+                print('Variables without Unwanted Variables\n' + ','.join(new_var) + '\n' + 5 * 20 * '-')
 
             if lista_variables != '':
                 lista_variables = (''.join([i for i in lista_variables if ' ' != i])).split(',')
