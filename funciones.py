@@ -39,7 +39,34 @@ class MatlabGrader:
         return lista_ord
 
     def units_value(self, var_str):
-        values_more_str = dict(zip('sol,Sol,phi,Phi,Delta,delta,f,Phase,phase,Eta,eta,ang,p,pp,s,w,N,E,V,I,Z,R,X,S,P,Q'.split(','), ',,deg,deg,,,Hz,deg,deg,,,deg,,,,rad/s,rpm,V,V,A,Ω,Ω,Ω,VA,W,VAr'.split(',')))
+        values_more_str = {
+        'sol': '',
+        'Sol': '',
+        'phi': 'deg',
+        'Phi': 'deg',
+        'Delta': '',
+        'delta': '',
+        'f': 'Hz',
+        'Phase': 'deg',
+        'phase': 'deg',
+        'Eta': '',
+        'eta': '',
+        'ang': 'deg',
+        'p': '',
+        'pp': '',
+        's': '',
+        'w': 'rad/s',
+        'N': 'rpm',
+        'E': 'V',
+        'V': 'V',
+        'I': 'A',
+        'Z': 'Ω',
+        'R': 'Ω',
+        'X': 'Ω',
+        'S': 'VA',
+        'P': 'W',
+        'Q': 'VAr'
+    }
         ord_values_more_str = self.ordenar_lis_str_inv([i for i in values_more_str])
         for i, var_tab in enumerate(ord_values_more_str):
             len_var_tab = len(var_tab)
