@@ -176,7 +176,7 @@ assessVariableEqual('{var_str}', {var_str}_Reference);
                             variables.remove(var_h)
                             posi.remove(posi[i])
                             break
-                print('Help Variables\n' + str(var_h_def) + '\n' + 5 * 20 * '-')
+                print('Help Variables\n' + ','.join(var_h_def) + '\n' + 5 * 20 * '-')
             for i in posi:
                 estudiante[i] = ''
             new_var = [i for i in variables]
@@ -191,8 +191,8 @@ assessVariableEqual('{var_str}', {var_str}_Reference);
                             new_var_n_d.append(var_n_d)
                             new_var.remove(var_n_d)
                             break
-                print('Unwanted Variable\n' + str(new_var_n_d) + '\n' + 5 * 20 * '-')
-                print('New Variables\n' + str(new_var) + '\n' + 5 * 20 * '-')
+                print('Unwanted Variable\n' + ','.join(new_var_n_d) + '\n' + 5 * 20 * '-')
+                print('New Variables\n' + ','.join(new_var) + '\n' + 5 * 20 * '-')
 
             if lista_variables != '':
                 lista_variables = (''.join([i for i in lista_variables if ' ' != i])).split(',')
@@ -206,7 +206,7 @@ assessVariableEqual('{var_str}', {var_str}_Reference);
                 variables_random = lista_variables
                 if variables_random == []:
                     variables_random = new_var
-                print('Variables Choisies\n' + str(variables_random) + '\n' + 5 * 20 * '-')
+                print('Variables Choisies\n' + ','.join(variables_random) + '\n' + 5 * 20 * '-')
             else:
                 if q_random == 100:
                     variables_random = [i for i in new_var]
@@ -216,7 +216,7 @@ assessVariableEqual('{var_str}', {var_str}_Reference);
                     else:
                         n_random = int(q_random / 100 * len(new_var))
                         variables_random = sorted(random.sample(new_var, n_random), key=lambda x: new_var.index(x))
-                        print('Random Variables\n' + str(variables_random) + '\n' + 5 * 20 * '-')
+                        print('Random Variables\n' + ','.join(variables_random) + '\n' + 5 * 20 * '-')
             for i, var in enumerate(variables_random):
                 for j, var_1 in enumerate(variables):
                     if var_1 == var:
