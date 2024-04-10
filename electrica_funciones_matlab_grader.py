@@ -165,6 +165,7 @@ assessVariableEqual('{var_str}', {var_str}_Reference);
                 if value:
                     variables.append(var)
                     posi.append(pos)
+            print(5 * 20 * '-'+'\nAll Variables\n' + ','.join(variables) + '\n' + 5 * 20 * '-')
             if variables_help != '':
                 variables_help = (''.join([i for i in variables_help if ' ' != i])).split(',')
                 variables_help = [i for i in variables_help if '' != i]
@@ -192,7 +193,7 @@ assessVariableEqual('{var_str}', {var_str}_Reference);
                             new_var.remove(var_n_d)
                             break
                 print('Unwanted Variable\n' + ','.join(new_var_n_d) + '\n' + 5 * 20 * '-')
-                print('New Variables\n' + ','.join(new_var) + '\n' + 5 * 20 * '-')
+                print('variables without unwanted variables\n' + ','.join(new_var) + '\n' + 5 * 20 * '-')
 
             if lista_variables != '':
                 lista_variables = (''.join([i for i in lista_variables if ' ' != i])).split(',')
